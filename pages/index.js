@@ -40,7 +40,8 @@ export default function Home() {
         {filteredRecipes.map(recipe => (
 <Link key={recipe.id} href={`/recipes/${recipe.id}`} legacyBehavior>
             <a className="border p-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
-              <h2 className="text-2xl font-bold">{recipe.title}</h2>
+              <img src={recipe.image} alt={recipe.title} className="w-full h-48 object-cover mb-4 rounded-lg" />
+                            <h2 className="text-2xl font-bold mb-2">{recipe.title}</h2>
               <p>{recipe.ingredients.join(', ')}</p>
             </a>
           </Link>

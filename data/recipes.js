@@ -10,7 +10,7 @@ export const recipes = [
       'Combine all ingredients.',
       'Serve with black pepper.'
     ],
-    image: 'https://via.placeholder.com/600x400'
+    image: 'https://images.unsplash.com/photo-1604908177520-4297a1d8d7b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHNwYWdoZXR0aSUyMGNhcmJvbmFyYXxlbnwwfHx8fDE2MzY2NzY2Njg&ixlib=rb-1.2.1&q=80&w=400'
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ export const recipes = [
       'Simmer until chicken is cooked.',
       'Serve with rice.'
     ],
-    image: 'https://via.placeholder.com/600x400'
+    image: 'https://images.unsplash.com/photo-1604908177520-4297a1d8d7b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHNwYWdoZXR0aSUyMGNhcmJvbmFyYXxlbnwwfHx8fDE2MzY2NzY2Njg&ixlib=rb-1.2.1&q=80&w=400'
   },
     {
       id: 3,
@@ -36,7 +36,7 @@ export const recipes = [
         'Simmer until thickened.',
         'Stir in sour cream and serve.'
       ],
-      image: 'https://via.placeholder.com/600x400'
+      image: 'https://images.unsplash.com/photo-1604908177520-4297a1d8d7b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHNwYWdoZXR0aSUyMGNhcmJvbmFyYXxlbnwwfHx8fDE2MzY2NzY2Njg&ixlib=rb-1.2.1&q=80&w=400'
     },
     {
       id: 4,
@@ -49,7 +49,7 @@ export const recipes = [
         'Add soy sauce and cook until tender.',
         'Serve with rice or noodles.'
       ],
-      image: 'https://via.placeholder.com/600x400'
+      image: 'https://images.unsplash.com/photo-1604908177520-4297a1d8d7b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHNwYWdoZXR0aSUyMGNhcmJvbmFyYXxlbnwwfHx8fDE2MzY2NzY2Njg&ixlib=rb-1.2.1&q=80&w=400'
     },
     {
       id: 5,
@@ -62,6 +62,6 @@ export const recipes = [
         'Flip and cook until golden brown.',
         'Serve with syrup or toppings of choice.'
       ],
-      image: 'https://via.placeholder.com/600x400'
+      image: 'https://images.unsplash.com/photo-1604908177520-4297a1d8d7b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHNwYWdoZXR0aSUyMGNhcmJvbmFyYXxlbnwwfHx8fDE2MzY2NzY2Njg&ixlib=rb-1.2.1&q=80&w=400'
     }
 ];
