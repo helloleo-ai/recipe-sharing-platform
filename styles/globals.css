@@ -1,3 +1,17 @@
+body {
+  background-color: #f7fafc;
+  color: #2d3748;
+  font-family: 'Arial', sans-serif;
+}
+
+a {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

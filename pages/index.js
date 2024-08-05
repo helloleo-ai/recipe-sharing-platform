@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
 export default function Home() {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
@@ -22,7 +25,9 @@ export default function Home() {
   );
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="bg-gray-100 min-h-screen flex flex-col">
+          <Header />
+          <main className="container mx-auto p-4 flex-grow">
       <h1 className="text-4xl font-bold mb-4">Recipe Sharing Platform</h1>
       <input
         type="text"
@@ -40,7 +45,9 @@ export default function Home() {
             </a>
           </Link>
         ))}
-      </div>
+      </main>
+            <Footer />
+          </div>
     </div>
   );
 }
