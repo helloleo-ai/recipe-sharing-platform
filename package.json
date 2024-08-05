@@ -18,7 +18,10 @@
     "tailwindcss": "^2.2.7",
     "jwt-decode": "^3.1.2"
   },
-  "devDependencies": {
+  "dependencies": {
+      "@fontsource/roboto": "^4.5.0"
+    },
+    "devDependencies": {
     "autoprefixer": "^10.2.6",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
