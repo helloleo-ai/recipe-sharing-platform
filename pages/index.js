@@ -26,8 +26,9 @@ export default function Home() {
 
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
-          <Header />
+<Header />
           <main className="container mx-auto p-8 flex-grow max-w-4xl">
+            <div className="bg-white p-8 rounded-lg shadow-lg">
       <h1 className="text-4xl font-bold mb-4">Recipe Sharing Platform</h1>
       <div className="mb-4">
               <button className="bg-green-500 text-white p-2 rounded mr-2">🍝 Pasta</button>
@@ -54,7 +55,8 @@ export default function Home() {
           </Link>
         ))}
       </div>
-      </main>
+      </div>
+            </main>
             <section className="container mx-auto p-4">
               <h2 className="text-3xl font-bold mb-4">Yummy Articles</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
