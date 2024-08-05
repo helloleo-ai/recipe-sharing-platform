@@ -27,9 +27,16 @@ export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
           <Header />
-          <main className="container mx-auto p-4 flex-grow">
+          <main className="container mx-auto p-4 flex-grow max-w-4xl">
       <h1 className="text-4xl font-bold mb-4">Recipe Sharing Platform</h1>
-      <input
+      <div className="mb-4">
+              <button className="bg-green-500 text-white p-2 rounded mr-2">🍝 Pasta</button>
+              <button className="bg-yellow-500 text-white p-2 rounded mr-2">🍛 Curry</button>
+              <button className="bg-red-500 text-white p-2 rounded mr-2">🥩 Beef</button>
+              <button className="bg-orange-500 text-white p-2 rounded mr-2">🥦 Veggie</button>
+              <button className="bg-blue-500 text-white p-2 rounded">🥞 Pancakes</button>
+            </div>
+            <input
         type="text"
         placeholder="Search recipes..."
         value={search}
