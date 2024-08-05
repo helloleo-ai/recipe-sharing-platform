@@ -45,9 +45,11 @@ export default function Home() {
             </a>
           </Link>
         ))}
+))}
+      </div>
       </main>
-            <Footer />
-          </div>
+      <Footer />
+    </div>
     </div>
   );
 }
