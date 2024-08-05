@@ -39,7 +39,7 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredRecipes.map(recipe => (
 <Link key={recipe.id} href={`/recipes/${recipe.id}`} legacyBehavior>
-            <a className="border p-4 rounded shadow hover:shadow-lg transition">
+            <a className="border p-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
               <h2 className="text-2xl font-bold">{recipe.title}</h2>
               <p>{recipe.ingredients.join(', ')}</p>
             </a>
@@ -47,8 +47,21 @@ export default function Home() {
         ))}
       </div>
       </main>
+            <section className="container mx-auto p-4">
+              <h2 className="text-3xl font-bold mb-4">Yummy Articles</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {recipes.map(recipe => (
+                  <div key={recipe.id} className="border p-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+                    <h3 className="text-2xl font-bold mb-2">{recipe.title}</h3>
+                    <p className="mb-2">{recipe.ingredients.join(', ')}</p>
+                    <Link href={`/recipes/${recipe.id}`} legacyBehavior>
+                      <a className="text-blue-500 hover:underline">Read more</a>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </section>
       <Footer />
-    </div>
     </div>
   );
 }
