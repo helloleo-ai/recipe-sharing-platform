@@ -27,6 +27,7 @@ export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
 <Header />
+          <h1 className="text-sm font-bold absolute top-0 right-0 m-4">🍴 Recipe Sharing Platform</h1>
           <main className="container mx-auto p-8 flex-grow max-w-4xl">
             <div className="bg-white p-8 rounded-lg shadow-lg">
       <h1 className="text-4xl font-bold mb-4">Recipe Sharing Platform</h1>
