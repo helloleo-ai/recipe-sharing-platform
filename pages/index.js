@@ -33,7 +33,7 @@ export default function Home() {
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredRecipes.map(recipe => (
-          <Link key={recipe.id} href={`/recipes/${recipe.id}`}>
+<Link key={recipe.id} href={`/recipes/${recipe.id}`} legacyBehavior>
             <a className="border p-4 rounded shadow hover:shadow-lg transition">
               <h2 className="text-2xl font-bold">{recipe.title}</h2>
               <p>{recipe.ingredients.join(', ')}</p>
