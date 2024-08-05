@@ -10,7 +10,7 @@ export const recipes = [
       'Combine all ingredients.',
       'Serve with black pepper.'
     ],
-    image: 'https://images.unsplash.com/photo-1604908177520-4297a1d8d7b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHNwYWdoZXR0aSUyMGNhcmJvbmFyYXxlbnwwfHx8fDE2MzY2NzY2Njg&ixlib=rb-1.2.1&q=80&w=400'
+    image: 'https://images.pexels.com/photos/2703468/pexels-photo-2703468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ export const recipes = [
       'Simmer until chicken is cooked.',
       'Serve with rice.'
     ],
-    image: 'https://images.unsplash.com/photo-1604908177520-4297a1d8d7b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHNwYWdoZXR0aSUyMGNhcmJvbmFyYXxlbnwwfHx8fDE2MzY2NzY2Njg&ixlib=rb-1.2.1&q=80&w=400'
+    image: 'https://images.pexels.com/photos/674574/pexels-photo-674574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
     {
       id: 3,
@@ -36,7 +36,7 @@ export const recipes = [
         'Simmer until thickened.',
         'Stir in sour cream and serve.'
       ],
-      image: 'https://images.unsplash.com/photo-1604908177520-4297a1d8d7b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHNwYWdoZXR0aSUyMGNhcmJvbmFyYXxlbnwwfHx8fDE2MzY2NzY2Njg&ixlib=rb-1.2.1&q=80&w=400'
+      image: 'https://images.pexels.com/photos/25390126/pexels-photo-25390126/free-photo-of-assiette-legumes-diner-repas.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     },
     {
       id: 4,
@@ -49,7 +49,7 @@ export const recipes = [
         'Add soy sauce and cook until tender.',
         'Serve with rice or noodles.'
       ],
-      image: 'https://images.unsplash.com/photo-1604908177520-4297a1d8d7b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHNwYWdoZXR0aSUyMGNhcmJvbmFyYXxlbnwwfHx8fDE2MzY2NzY2Njg&ixlib=rb-1.2.1&q=80&w=400'
+      image: 'https://images.pexels.com/photos/25355714/pexels-photo-25355714/free-photo-of-homme-faisant-frire-sur-un-barbecue-mongol.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     },
     {
       id: 5,
@@ -62,6 +62,6 @@ export const recipes = [
         'Flip and cook until golden brown.',
         'Serve with syrup or toppings of choice.'
       ],
-      image: 'https://images.unsplash.com/photo-1604908177520-4297a1d8d7b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHNwYWdoZXR0aSUyMGNhcmJvbmFyYXxlbnwwfHx8fDE2MzY2NzY2Njg&ixlib=rb-1.2.1&q=80&w=400'
+      image: 'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     }
 ];
