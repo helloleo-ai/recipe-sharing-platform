@@ -4,6 +4,8 @@ header {
 }
 
 nav a {
+  padding: 0.125rem 0.25rem; /* Smaller padding */
+  margin: 0.125rem; /* Add margin */
   display: flex;
   align-items: center;
   padding: 0.25rem 0.5rem;
