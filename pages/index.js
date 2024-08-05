@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
           <Header />
-          <main className="container mx-auto p-4 flex-grow max-w-4xl">
+          <main className="container mx-auto p-8 flex-grow max-w-4xl">
       <h1 className="text-4xl font-bold mb-4">Recipe Sharing Platform</h1>
       <div className="mb-4">
               <button className="bg-green-500 text-white p-2 rounded mr-2">🍝 Pasta</button>
