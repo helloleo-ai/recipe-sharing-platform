@@ -2,18 +2,28 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="bg-blue-600 text-white p-8">
+    <header className="bg-blue-600 text-white p-4 rounded-full shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-3xl font-bold">Recipe Sharing Platform</h1>
+        <h1 className="text-3xl font-bold">🍴 Recipe Sharing Platform</h1>
         <nav>
+<nav className="flex space-x-4">
           <Link href="/" legacyBehavior>
-            <a className="mr-4">Home</a>
+            <a className="flex items-center space-x-2 bg-white text-blue-600 px-4 py-2 rounded-full shadow-md hover:bg-gray-100 transition">
+              <span>🏠</span>
+              <span>Home</span>
+            </a>
           </Link>
           <Link href="/register" legacyBehavior>
-            <a className="mr-4">Register</a>
+            <a className="flex items-center space-x-2 bg-white text-blue-600 px-4 py-2 rounded-full shadow-md hover:bg-gray-100 transition">
+              <span>📝</span>
+              <span>Register</span>
+            </a>
           </Link>
           <Link href="/login" legacyBehavior>
-            <a>Login</a>
+            <a className="flex items-center space-x-2 bg-white text-blue-600 px-4 py-2 rounded-full shadow-md hover:bg-gray-100 transition">
+              <span>🔑</span>
+              <span>Login</span>
+            </a>
           </Link>
         </nav>
       </div>

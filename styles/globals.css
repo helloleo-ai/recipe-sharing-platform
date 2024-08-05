@@ -1,3 +1,22 @@
+header {
+  border-radius: 9999px; /* Full rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* Full rounded corners */
+  background-color: white;
+  color: #3182ce;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #f0f0f0;
+}
 body {
   background-color: #f7fafc;
   color: #2d3748;
