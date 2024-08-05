@@ -2,10 +2,9 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="bg-blue-600 text-white p-4 rounded-full shadow-lg">
+    <header className="bg-gray-200 text-gray-800 p-2 rounded-full shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-3xl font-bold">🍴 Recipe Sharing Platform</h1>
-        <nav>
 <nav className="flex space-x-4">
           <Link href="/" legacyBehavior>
             <a className="flex items-center space-x-2 bg-white text-blue-600 px-4 py-2 rounded-full shadow-md hover:bg-gray-100 transition">
