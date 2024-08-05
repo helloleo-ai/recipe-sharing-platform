@@ -1,4 +1,5 @@
 header {
+  position: relative; /* Ensure the header is positioned relative for absolute positioning of the title */
   border-radius: 9999px; /* Full rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   max-width: 1024px; /* Match the max-width of the main column */
