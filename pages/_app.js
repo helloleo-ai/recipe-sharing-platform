@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import '@fontsource/roboto'; // Import Roboto font
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { AuthProvider } from '../context/AuthContext';

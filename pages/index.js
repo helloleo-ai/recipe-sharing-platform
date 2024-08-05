@@ -30,27 +30,27 @@ export default function Home() {
           <h1 className="text-sm font-bold absolute top-0 right-0 m-4">🍴 Recipe Sharing Platform</h1>
           <main className="container mx-auto p-8 flex-grow max-w-4xl">
             <div className="bg-white p-8 rounded-lg shadow-lg">
-      <h1 className="text-4xl font-bold mb-4">Recipe Sharing Platform</h1>
+      <h1 className="text-4xl font-bold mb-4 text-orange-500">Recipe Sharing Platform</h1>
       <div className="mb-4">
-              <button className="bg-green-500 text-white p-2 rounded mr-2">🍝 Pasta</button>
-              <button className="bg-yellow-500 text-white p-2 rounded mr-2">🍛 Curry</button>
-              <button className="bg-red-500 text-white p-2 rounded mr-2">🥩 Beef</button>
-              <button className="bg-orange-500 text-white p-2 rounded mr-2">🥦 Veggie</button>
-              <button className="bg-blue-500 text-white p-2 rounded">🥞 Pancakes</button>
+<button className="bg-orange-500 text-white p-2 rounded mr-2 hover:bg-orange-600 transition">🍝 Pasta</button>
+              <button className="bg-yellow-500 text-white p-2 rounded mr-2 hover:bg-yellow-600 transition">🍛 Curry</button>
+              <button className="bg-red-500 text-white p-2 rounded mr-2 hover:bg-red-600 transition">🥩 Beef</button>
+              <button className="bg-green-500 text-white p-2 rounded mr-2 hover:bg-green-600 transition">🥦 Veggie</button>
+              <button className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition">🥞 Pancakes</button>
             </div>
             <input
         type="text"
         placeholder="Search recipes..."
         value={search}
         onChange={handleSearch}
-        className="border p-2 mb-4 w-full"
+        className="border p-2 mb-4 w-full rounded-lg"
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredRecipes.map(recipe => (
 <Link key={recipe.id} href={`/recipes/${recipe.id}`} legacyBehavior>
-            <a className="border p-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
-              <img src={recipe.image} alt={recipe.title} className="w-full h-48 object-cover mb-4 rounded-lg" />
-                            <h2 className="text-2xl font-bold mb-2">{recipe.title}</h2>
+            <a className="border p-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105 bg-white">
+              <img src={recipe.image} alt={recipe.title} className="w-full h-48 object-cover mb-4 rounded-full" />
+                            <h2 className="text-2xl font-bold mb-2 text-orange-500">{recipe.title}</h2>
               <p>{recipe.ingredients.join(', ')}</p>
             </a>
           </Link>
@@ -63,10 +63,10 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {recipes.map(recipe => (
                   <div key={recipe.id} className="border p-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
-                    <h3 className="text-2xl font-bold mb-2">{recipe.title}</h3>
+                    <h3 className="text-2xl font-bold mb-2 text-orange-500">{recipe.title}</h3>
                     <p className="mb-2">{recipe.ingredients.join(', ')}</p>
                     <Link href={`/recipes/${recipe.id}`} legacyBehavior>
-                      <a className="text-blue-500 hover:underline">Read more</a>
+                      <a className="text-orange-500 hover:underline">Read more</a>
                     </Link>
                   </div>
                 ))}
