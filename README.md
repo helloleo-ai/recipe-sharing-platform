@@ -1,15 +1,28 @@
-# Recipe Sharing Platform
+# 🍽️ Recipe Sharing Platform
 
-This is a Recipe Sharing Platform built with Next.js, Tailwind CSS, and Axios. Users can register, login, and share their favorite recipes.
+Welcome to our Recipe Sharing Platform! 🎉 This delicious project is built with Next.js, Tailwind CSS, and Axios. Users can register, login, and share their favorite recipes.
 
-## Features
+## 🌟 Features
 
-- User registration and login
-- Recipe search functionality
-- Recipe details page
-- Authentication using JWT
+- 👤 User registration and login
+- 🔍 Recipe search functionality
+- 📖 Recipe details page
+- 🔐 Authentication using JWT
 
-## Getting Started
+## 🖼️ Previews
+
+Here's a sneak peek of what our platform looks like:
+
+### Home Page
+![Recipe Index](public/previews/recipe-index.png)
+
+### Recipe Detail
+![Recipe Detail](public/previews/recipe-detail.png)
+
+### Registration Page
+![Recipe Register](public/previews/recipe-register.png)
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -33,7 +46,7 @@ This is a Recipe Sharing Platform built with Next.js, Tailwind CSS, and Axios. U
    yarn install
    ```
 
-### Running the Development Server
+### 🏃‍♂️ Running the Development Server
 
 To start the development server, run:
 
@@ -45,7 +58,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-### Building for Production
+### 🏗️ Building for Production
 
 To build the application for production, run:
 
@@ -55,7 +68,7 @@ npm run build
 yarn build
 ```
 
-### Starting the Production Server
+### 🚀 Starting the Production Server
 
 After building the application, you can start the production server with:
 
@@ -65,7 +78,7 @@ npm start
 yarn start
 ```
 
-### Linting
+### 🧹 Linting
 
 To run the linter, use:
 
@@ -75,6 +88,8 @@ npm run lint
 yarn lint
 ```
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License.
+
+Happy cooking! 🍳👨‍🍳👩‍🍳
