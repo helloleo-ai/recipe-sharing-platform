@@ -2,29 +2,33 @@
   "name": "recipe-sharing-platform",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://helloleo-ai.github.io/repository",
   "scripts": {
     "dev": "next dev -p 4000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build",
+    "deploy": "npm run export && gh-pages -d out"
   },
   "dependencies": {
+    "@fontsource/roboto": "^4.5.0",
     "axios": "^0.21.1",
+    "chart.js": "^3.7.0",
     "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
     "next": "latest",
     "react": "latest",
+    "react-chartjs-2": "^4.0.0",
     "react-dom": "latest",
     "styled-components": "^5.3.0",
-    "tailwindcss": "^2.2.7",
-    "jwt-decode": "^3.1.2",
-    "@fontsource/roboto": "^4.5.0",
-    "chart.js": "^3.7.0",
-    "react-chartjs-2": "^4.0.0"
+    "tailwindcss": "^2.2.7"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.3.6"
   }
 }
