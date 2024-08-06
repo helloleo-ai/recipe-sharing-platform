@@ -27,14 +27,14 @@ export default function Home() {
 
   return (
 <div className="bg-gray-100 min-h-screen flex flex-col">
-      <div className="fixed top-4 left-4 z-50">
+<div className="fixed top-4 left-4 z-50">
         <div className="bg-white p-2 rounded-full shadow-lg">
           <Image
-            src="https://gibbonsgazette.org/wp-content/uploads/2022/11/Alfredo-Linguini-from-the-movie-Ratatouille-3.webp"
-            alt="Alfredo Linguini"
+            src="https://images.pexels.com/photos/3814446/pexels-photo-3814446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="Chef"
             width={64}
             height={64}
-            className="rounded-full"
+            className="rounded-full object-cover"
           />
         </div>
       </div>
