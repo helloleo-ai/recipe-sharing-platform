@@ -118,7 +118,8 @@ export default function Home() {
       </div>
             </main>
 <section className="container mx-auto p-8 bg-gray-100 rounded-xl shadow-inner">
-              <h2 className="text-4xl font-bold mb-8 text-center text-gray-800">Culinary Inspiration</h2>
+              <h2 className="text-4xl font-bold mb-2 text-center text-gray-800">Culinary Inspiration</h2>
+              <p className="text-xl text-center text-gray-600 mb-8">Discover new flavors and cooking techniques</p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {recipes.map(recipe => (
                   <div key={recipe.id} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">

@@ -30,8 +30,9 @@ export default function Register() {
         />
       </div>
       <div className="w-full md:w-1/2 flex items-center justify-center bg-white">
-        <div className="max-w-md w-full p-6">
-          <h1 className="text-4xl font-bold mb-6 text-center text-gray-800">Register</h1>
+<div className="max-w-md w-full p-6">
+          <h1 className="text-4xl font-bold mb-2 text-center text-gray-800">Register</h1>
+          <p className="text-xl text-center text-gray-600 mb-6">Join our community of food enthusiasts</p>
           <form onSubmit={handleRegister} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700">Email</label>
