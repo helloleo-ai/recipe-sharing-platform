@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -25,16 +26,20 @@ export default function Home() {
   );
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col">
-<div className="flex justify-between items-center max-w-6xl mx-auto px-4 py-4">
-        <Header />
-      </div>
-      <div className="fixed left-4 top-1/2 transform -translate-y-1/2 flex flex-col items-center space-y-2 bg-white p-4 rounded-lg shadow-lg">
-        <img src="https://gibbonsgazette.org/wp-content/uploads/2022/11/Alfredo-Linguini-from-the-movie-Ratatouille-3.webp" alt="Profile" className="w-16 h-16 rounded-full border-2 border-orange-500 object-cover" />
-        <div className="text-center">
-          <h2 className="font-bold text-lg text-gray-800">Alfredo Linguini</h2>
-          <p className="text-sm text-gray-600">@linguini_chef</p>
+<div className="bg-gray-100 min-h-screen flex flex-col">
+      <div className="fixed top-4 left-4 z-50">
+        <div className="bg-white p-2 rounded-full shadow-lg">
+          <Image
+            src="https://gibbonsgazette.org/wp-content/uploads/2022/11/Alfredo-Linguini-from-the-movie-Ratatouille-3.webp"
+            alt="Alfredo Linguini"
+            width={64}
+            height={64}
+            className="rounded-full"
+          />
         </div>
+      </div>
+      <div className="flex justify-between items-center max-w-6xl mx-auto px-4 py-4">
+        <Header />
       </div>
       <main className="container mx-auto p-8 flex-grow max-w-4xl">
         <div className="bg-white p-8 rounded-lg shadow-lg">
