@@ -1,3 +1,19 @@
+const getCategoryEmoji = (category) => {
+  switch (category.toLowerCase()) {
+    case 'pasta':
+      return '🍝';
+    case 'curry':
+      return '🍛';
+    case 'beef':
+      return '🥩';
+    case 'veggie':
+      return '🥦';
+    case 'pancakes':
+      return '🥞';
+    default:
+      return '🍽️';
+  }
+};
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
@@ -9,6 +25,7 @@ import Footer from '../components/Footer';
 export default function Home() {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
 
   useEffect(() => {
     // Fetch recipes from API
@@ -21,9 +38,16 @@ export default function Home() {
     setSearch(e.target.value);
   };
 
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category === selectedCategory ? '' : category);
+  };
+
   const filteredRecipes = recipes.filter(recipe =>
-    recipe.title.toLowerCase().includes(search.toLowerCase())
+    recipe.title.toLowerCase().includes(search.toLowerCase()) &&
+    (selectedCategory === '' || recipe.category === selectedCategory)
   );
+
+  const categories = ['Pasta', 'Curry', 'Beef', 'Veggie', 'Pancakes'];
 
   return (
 <div className="bg-gray-100 min-h-screen flex flex-col">
@@ -45,26 +69,20 @@ export default function Home() {
         <div className="bg-white p-8 rounded-lg shadow-lg">
           <h1 className="text-4xl font-bold mb-4 text-orange-500">Recipe Sharing Platform</h1>
 <div className="mb-6 flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-4 py-2 rounded-full shadow-md hover:from-orange-500 hover:to-orange-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50">
-                <span className="text-xl mr-2">🍝</span>
-                <span className="font-semibold">Pasta</span>
-              </button>
-              <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-4 py-2 rounded-full shadow-md hover:from-yellow-500 hover:to-yellow-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50">
-                <span className="text-xl mr-2">🍛</span>
-                <span className="font-semibold">Curry</span>
-              </button>
-              <button className="bg-gradient-to-r from-red-400 to-red-600 text-white px-4 py-2 rounded-full shadow-md hover:from-red-500 hover:to-red-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
-                <span className="text-xl mr-2">🥩</span>
-                <span className="font-semibold">Beef</span>
-              </button>
-              <button className="bg-gradient-to-r from-green-400 to-green-600 text-white px-4 py-2 rounded-full shadow-md hover:from-green-500 hover:to-green-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
-                <span className="text-xl mr-2">🥦</span>
-                <span className="font-semibold">Veggie</span>
-              </button>
-              <button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-4 py-2 rounded-full shadow-md hover:from-blue-500 hover:to-blue-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-                <span className="text-xl mr-2">🥞</span>
-                <span className="font-semibold">Pancakes</span>
-              </button>
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => handleCategorySelect(category)}
+                  className={`px-4 py-2 rounded-full shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-opacity-50 ${
+                    selectedCategory === category
+                      ? 'bg-orange-500 text-white'
+                      : 'bg-white text-gray-800 hover:bg-gray-100'
+                  }`}
+                >
+                  <span className="text-xl mr-2">{getCategoryEmoji(category)}</span>
+                  <span className="font-semibold">{category}</span>
+                </button>
+              ))}
             </div>
             <input
         type="text"
@@ -99,16 +117,35 @@ export default function Home() {
       </div>
       </div>
             </main>
-            <section className="container mx-auto p-4">
-              <h2 className="text-3xl font-bold mb-4">Yummy Articles</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<section className="container mx-auto p-8 bg-gray-100 rounded-xl shadow-inner">
+              <h2 className="text-4xl font-bold mb-8 text-center text-gray-800">Culinary Inspiration</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {recipes.map(recipe => (
-                  <div key={recipe.id} className="border p-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
-                    <h3 className="text-2xl font-bold mb-2 text-orange-500">{recipe.title}</h3>
-                    <p className="mb-2">{recipe.ingredients.join(', ')}</p>
-                    <Link href={`/recipes/${recipe.id}`} legacyBehavior>
-                      <a className="text-orange-500 hover:underline">Read more</a>
-                    </Link>
+                  <div key={recipe.id} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div className="relative">
+                      <img src={recipe.image} alt={recipe.title} className="w-full h-48 object-cover" />
+                      <div className="absolute top-0 right-0 bg-orange-500 text-white px-3 py-1 rounded-bl-lg">
+                        {recipe.ingredients.length} ingredients
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold mb-2 text-gray-800">{recipe.title}</h3>
+                      <p className="text-gray-600 mb-4 line-clamp-3">{recipe.steps[0]}</p>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center">
+                          <img src="https://i.pravatar.cc/40" alt="Author" className="w-8 h-8 rounded-full mr-2" />
+                          <span className="text-sm text-gray-500">Chef Linguini</span>
+                        </div>
+                        <Link href={`/recipes/${recipe.id}`} legacyBehavior>
+                          <a className="text-orange-500 hover:text-orange-600 font-semibold flex items-center">
+                            Read more
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                            </svg>
+                          </a>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
