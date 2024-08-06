@@ -29,8 +29,9 @@ export default function RecipeDetails() {
     datasets: [
       {
         data: [recipe.nutrition.protein, recipe.nutrition.carbs, recipe.nutrition.fat],
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-        hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+        backgroundColor: ['#4CAF50', '#2196F3', '#FFC107'],
+        hoverBackgroundColor: ['#45a049', '#1e88e5', '#ffb300'],
+        borderWidth: 0,
       }
     ]
   };
@@ -48,11 +49,80 @@ export default function RecipeDetails() {
           recipe.nutrition.fiber,
           recipe.nutrition.sugar
         ],
-        backgroundColor: 'rgba(75, 192, 192, 0.6)',
-        borderColor: 'rgba(75, 192, 192, 1)',
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.7)',
+          'rgba(54, 162, 235, 0.7)',
+          'rgba(255, 206, 86, 0.7)',
+          'rgba(75, 192, 192, 0.7)',
+          'rgba(153, 102, 255, 0.7)',
+          'rgba(255, 159, 64, 0.7)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+        ],
         borderWidth: 1
       }
     ]
+  };
+
+  const doughnutOptions = {
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: {
+          font: {
+            size: 14,
+            family: 'Roboto, sans-serif'
+          }
+        }
+      }
+    },
+    cutout: '70%',
+    responsive: true,
+    maintainAspectRatio: false
+  };
+
+  const barOptions = {
+    plugins: {
+      legend: {
+        display: false
+      },
+      title: {
+        display: true,
+        text: 'Nutrition Breakdown',
+        font: {
+          size: 18,
+          family: 'Roboto, sans-serif',
+          weight: 'bold'
+        }
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          font: {
+            size: 12,
+            family: 'Roboto, sans-serif'
+          }
+        }
+      },
+      x: {
+        ticks: {
+          font: {
+            size: 12,
+            family: 'Roboto, sans-serif'
+          }
+        }
+      }
+    },
+    responsive: true,
+    maintainAspectRatio: false
   };
 
   return (
@@ -94,25 +164,20 @@ export default function RecipeDetails() {
               ))}
             </ol>
           </div>
-          <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-6">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-gray-800">Nutrition Information</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold mb-2">Macronutrients</h3>
-                <Doughnut data={macronutrientData} />
+<div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">Nutrition Information</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-gray-50 rounded-lg p-4">
+                <h3 className="text-lg font-semibold mb-4 text-gray-700">Macronutrients</h3>
+                <div className="h-64">
+                  <Doughnut data={macronutrientData} options={doughnutOptions} />
+                </div>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-2">Nutrition Breakdown</h3>
-                <Bar
-                  data={nutritionData}
-                  options={{
-                    scales: {
-                      y: {
-                        beginAtZero: true
-                      }
-                    }
-                  }}
-                />
+              <div className="bg-gray-50 rounded-lg p-4">
+                <h3 className="text-lg font-semibold mb-4 text-gray-700">Nutrition Breakdown</h3>
+                <div className="h-64">
+                  <Bar data={nutritionData} options={barOptions} />
+                </div>
               </div>
             </div>
           </div>
