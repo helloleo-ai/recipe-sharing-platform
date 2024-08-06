@@ -60,13 +60,26 @@ export default function Home() {
         onChange={handleSearch}
         className="border p-2 mb-4 w-full rounded-lg"
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredRecipes.map(recipe => (
-<Link key={recipe.id} href={`/recipes/${recipe.id}`} legacyBehavior>
-            <a className="border p-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105 bg-white">
-              <img src={recipe.image} alt={recipe.title} className="w-full h-48 object-cover mb-4 rounded-full" />
-                            <h2 className="text-2xl font-bold mb-2 text-orange-500">{recipe.title}</h2>
-              <p>{recipe.ingredients.join(', ')}</p>
+          <Link key={recipe.id} href={`/recipes/${recipe.id}`} legacyBehavior>
+            <a className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="relative">
+                <img src={recipe.image} alt={recipe.title} className="w-full h-56 object-cover" />
+                <div className="absolute top-0 left-0 bg-orange-500 text-white px-3 py-1 rounded-br-lg">
+                  {recipe.ingredients.length} ingredients
+                </div>
+              </div>
+              <div className="p-6">
+                <h2 className="text-2xl font-bold mb-2 text-gray-800">{recipe.title}</h2>
+                <p className="text-gray-600 mb-4">{recipe.ingredients.slice(0, 3).join(', ')}...</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-orange-500 font-semibold">View Recipe</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
             </a>
           </Link>
         ))}
