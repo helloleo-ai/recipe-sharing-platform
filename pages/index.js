@@ -27,17 +27,16 @@ export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
 <Header />
-          <h1 className="text-sm font-bold absolute top-0 right-0 m-4">🍴 Recipe Sharing Platform</h1>
-          <main className="container mx-auto p-8 flex-grow max-w-4xl">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-      <div className="flex items-center space-x-4 mb-6">
-              <img src="/path/to/profile.jpg" alt="Profile" className="w-12 h-12 rounded-full border-2 border-orange-500" />
-              <div>
-                <h2 className="font-bold text-xl text-gray-800">User Name</h2>
-                <p className="text-sm text-gray-600">@username</p>
-              </div>
-            </div>
-            <h1 className="text-4xl font-bold mb-4 text-orange-500">Recipe Sharing Platform</h1>
+      <div className="container mx-auto px-4 py-2 flex items-center space-x-4">
+        <img src="https://gibbonsgazette.org/wp-content/uploads/2022/11/Alfredo-Linguini-from-the-movie-Ratatouille-3.webp" alt="Profile" className="w-12 h-12 rounded-full border-2 border-orange-500 object-cover" />
+        <div>
+          <h2 className="font-bold text-xl text-gray-800">Alfredo Linguini</h2>
+          <p className="text-sm text-gray-600">@linguini_chef</p>
+        </div>
+      </div>
+      <main className="container mx-auto p-8 flex-grow max-w-4xl">
+        <div className="bg-white p-8 rounded-lg shadow-lg">
+          <h1 className="text-4xl font-bold mb-4 text-orange-500">Recipe Sharing Platform</h1>
 <div className="mb-6 flex flex-wrap justify-center gap-4">
               <button className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-4 py-2 rounded-full shadow-md hover:from-orange-500 hover:to-orange-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50">
                 <span className="text-xl mr-2">🍝</span>
