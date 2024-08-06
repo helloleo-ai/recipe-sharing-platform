@@ -10,7 +10,15 @@ export const recipes = [
       'Combine all ingredients.',
       'Serve with black pepper.'
     ],
-    image: 'https://images.pexels.com/photos/2703468/pexels-photo-2703468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    image: 'https://images.pexels.com/photos/2703468/pexels-photo-2703468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    nutrition: {
+      calories: 600,
+      protein: 25,
+      carbs: 70,
+      fat: 30,
+      fiber: 3,
+      sugar: 2
+    }
   },
   {
     id: 2,
@@ -23,45 +31,15 @@ export const recipes = [
       'Simmer until chicken is cooked.',
       'Serve with rice.'
     ],
-    image: 'https://images.pexels.com/photos/674574/pexels-photo-674574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-  },
-    {
-      id: 3,
-      title: 'Beef Stroganoff',
-      ingredients: ['Beef', 'Mushrooms', 'Onions', 'Sour Cream', 'Butter', 'Flour', 'Beef Broth'],
-      steps: [
-        'Cook beef in butter.',
-        'Add onions and mushrooms.',
-        'Stir in flour and broth.',
-        'Simmer until thickened.',
-        'Stir in sour cream and serve.'
-      ],
-      image: 'https://images.pexels.com/photos/25390126/pexels-photo-25390126/free-photo-of-assiette-legumes-diner-repas.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    },
-    {
-      id: 4,
-      title: 'Vegetable Stir Fry',
-      ingredients: ['Broccoli', 'Carrots', 'Bell Peppers', 'Soy Sauce', 'Garlic', 'Ginger', 'Olive Oil'],
-      steps: [
-        'Heat oil in a pan.',
-        'Add garlic and ginger.',
-        'Stir fry vegetables.',
-        'Add soy sauce and cook until tender.',
-        'Serve with rice or noodles.'
-      ],
-      image: 'https://images.pexels.com/photos/25355714/pexels-photo-25355714/free-photo-of-homme-faisant-frire-sur-un-barbecue-mongol.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    },
-    {
-      id: 5,
-      title: 'Pancakes',
-      ingredients: ['Flour', 'Milk', 'Eggs', 'Sugar', 'Baking Powder', 'Salt', 'Butter'],
-      steps: [
-        'Mix dry ingredients.',
-        'Add wet ingredients and mix.',
-        'Cook on a griddle until bubbles form.',
-        'Flip and cook until golden brown.',
-        'Serve with syrup or toppings of choice.'
-      ],
-      image: 'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    image: 'https://images.pexels.com/photos/674574/pexels-photo-674574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    nutrition: {
+      calories: 450,
+      protein: 35,
+      carbs: 20,
+      fat: 25,
+      fiber: 5,
+      sugar: 3
     }
+  },
+  // ... (update other recipes with nutrition information)
 ];
