@@ -42,7 +42,12 @@ export default function Login() {
             required
           />
         </div>
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded">Login</button>
+        <button 
+                  type="submit" 
+                  className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-3 rounded-full shadow-md hover:from-blue-600 hover:to-blue-800 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                >
+                  Login
+                </button>
       </form>
     </div>
   );

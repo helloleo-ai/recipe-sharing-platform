@@ -10,21 +10,21 @@ export default function Header() {
               </div>
 <nav className="flex space-x-4">
           <Link href="/" legacyBehavior>
-            <a className="flex items-center space-x-2 bg-orange-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-orange-600 transition">
-              <span>🏠</span>
-              <span>Home</span>
+            <a className="flex items-center space-x-2 bg-gradient-to-r from-orange-400 to-orange-600 text-white px-4 py-2 rounded-full shadow-md hover:from-orange-500 hover:to-orange-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+              <span className="text-xl">🏠</span>
+              <span className="font-semibold">Home</span>
             </a>
           </Link>
           <Link href="/register" legacyBehavior>
-            <a className="flex items-center space-x-2 bg-yellow-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-yellow-600 transition">
-              <span>📝</span>
-              <span>Register</span>
+            <a className="flex items-center space-x-2 bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-4 py-2 rounded-full shadow-md hover:from-yellow-500 hover:to-yellow-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+              <span className="text-xl">📝</span>
+              <span className="font-semibold">Register</span>
             </a>
           </Link>
           <Link href="/login" legacyBehavior>
-            <a className="flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-green-600 transition">
-              <span>🔑</span>
-              <span>Login</span>
+            <a className="flex items-center space-x-2 bg-gradient-to-r from-green-400 to-green-600 text-white px-4 py-2 rounded-full shadow-md hover:from-green-500 hover:to-green-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+              <span className="text-xl">🔑</span>
+              <span className="font-semibold">Login</span>
             </a>
           </Link>
         </nav>

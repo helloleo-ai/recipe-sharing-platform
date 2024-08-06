@@ -31,12 +31,27 @@ export default function Home() {
           <main className="container mx-auto p-8 flex-grow max-w-4xl">
             <div className="bg-white p-8 rounded-lg shadow-lg">
       <h1 className="text-4xl font-bold mb-4 text-orange-500">Recipe Sharing Platform</h1>
-      <div className="mb-4">
-<button className="bg-orange-500 text-white p-2 rounded mr-2 hover:bg-orange-600 transition">🍝 Pasta</button>
-              <button className="bg-yellow-500 text-white p-2 rounded mr-2 hover:bg-yellow-600 transition">🍛 Curry</button>
-              <button className="bg-red-500 text-white p-2 rounded mr-2 hover:bg-red-600 transition">🥩 Beef</button>
-              <button className="bg-green-500 text-white p-2 rounded mr-2 hover:bg-green-600 transition">🥦 Veggie</button>
-              <button className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition">🥞 Pancakes</button>
+<div className="mb-6 flex flex-wrap justify-center gap-4">
+              <button className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-4 py-2 rounded-full shadow-md hover:from-orange-500 hover:to-orange-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50">
+                <span className="text-xl mr-2">🍝</span>
+                <span className="font-semibold">Pasta</span>
+              </button>
+              <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-4 py-2 rounded-full shadow-md hover:from-yellow-500 hover:to-yellow-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50">
+                <span className="text-xl mr-2">🍛</span>
+                <span className="font-semibold">Curry</span>
+              </button>
+              <button className="bg-gradient-to-r from-red-400 to-red-600 text-white px-4 py-2 rounded-full shadow-md hover:from-red-500 hover:to-red-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+                <span className="text-xl mr-2">🥩</span>
+                <span className="font-semibold">Beef</span>
+              </button>
+              <button className="bg-gradient-to-r from-green-400 to-green-600 text-white px-4 py-2 rounded-full shadow-md hover:from-green-500 hover:to-green-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+                <span className="text-xl mr-2">🥦</span>
+                <span className="font-semibold">Veggie</span>
+              </button>
+              <button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-4 py-2 rounded-full shadow-md hover:from-blue-500 hover:to-blue-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                <span className="text-xl mr-2">🥞</span>
+                <span className="font-semibold">Pancakes</span>
+              </button>
             </div>
             <input
         type="text"
