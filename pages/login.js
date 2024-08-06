@@ -21,8 +21,16 @@ export default function Login() {
   };
 
   return (
-    <div className="flex h-screen">
-      <div className="w-1/2 flex items-center justify-center bg-white">
+    <div className="flex flex-col md:flex-row h-screen">
+      <div className="w-full md:w-1/2 h-64 md:h-auto relative">
+        <Image
+          src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="Login background"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+      <div className="w-full md:w-1/2 flex items-center justify-center bg-white">
         <div className="max-w-md w-full p-6">
           <h1 className="text-4xl font-bold mb-6 text-center text-gray-800">Login</h1>
           <form onSubmit={handleLogin} className="space-y-4">
@@ -60,14 +68,6 @@ export default function Login() {
             </Link>
           </p>
         </div>
-      </div>
-      <div className="w-1/2 relative">
-        <Image
-          src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          alt="Login background"
-          layout="fill"
-          objectFit="cover"
-        />
       </div>
     </div>
   );
