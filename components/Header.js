@@ -1,11 +1,9 @@
 import Link from 'next/link';
 
-import Link from 'next/link';
-
 export default function Header() {
   return (
-    <header className="bg-white text-gray-800 p-4 rounded-full shadow-md m-2 max-w-4xl mx-auto flex items-center">
-      <div className="container mx-auto flex justify-end items-center space-x-4">
+    <header className="bg-white text-gray-800 p-4 rounded-full shadow-md flex items-center">
+      <div className="flex justify-end items-center space-x-4">
 <nav className="flex space-x-4">
           <Link href="/" legacyBehavior>
             <a className="flex items-center space-x-2 bg-gradient-to-r from-orange-400 to-orange-600 text-white px-4 py-2 rounded-full shadow-md hover:from-orange-500 hover:to-orange-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
