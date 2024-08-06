@@ -27,14 +27,14 @@ export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
 <div className="flex justify-between items-center max-w-6xl mx-auto px-4 py-4">
-        <div className="flex items-center space-x-4">
-          <img src="https://gibbonsgazette.org/wp-content/uploads/2022/11/Alfredo-Linguini-from-the-movie-Ratatouille-3.webp" alt="Profile" className="w-12 h-12 rounded-full border-2 border-orange-500 object-cover" />
-          <div>
-            <h2 className="font-bold text-xl text-gray-800">Alfredo Linguini</h2>
-            <p className="text-sm text-gray-600">@linguini_chef</p>
-          </div>
-        </div>
         <Header />
+      </div>
+      <div className="fixed left-4 top-1/2 transform -translate-y-1/2 flex flex-col items-center space-y-2 bg-white p-4 rounded-lg shadow-lg">
+        <img src="https://gibbonsgazette.org/wp-content/uploads/2022/11/Alfredo-Linguini-from-the-movie-Ratatouille-3.webp" alt="Profile" className="w-16 h-16 rounded-full border-2 border-orange-500 object-cover" />
+        <div className="text-center">
+          <h2 className="font-bold text-lg text-gray-800">Alfredo Linguini</h2>
+          <p className="text-sm text-gray-600">@linguini_chef</p>
+        </div>
       </div>
       <main className="container mx-auto p-8 flex-grow max-w-4xl">
         <div className="bg-white p-8 rounded-lg shadow-lg">
