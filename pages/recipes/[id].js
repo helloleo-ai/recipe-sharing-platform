@@ -12,6 +12,9 @@ export default function RecipeDetails() {
   const router = useRouter();
   const { id } = router.query;
   const [recipe, setRecipe] = useState(null);
+  const [showIngredients, setShowIngredients] = useState(true);
+  const [showSteps, setShowSteps] = useState(true);
+  const [showNutrition, setShowNutrition] = useState(true);
 
   useEffect(() => {
     if (id) {
@@ -146,40 +149,73 @@ export default function RecipeDetails() {
         </div>
         <div className="w-full md:w-1/2 p-4 md:p-8 overflow-y-auto">
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-orange-500">{recipe.title}</h1>
+          
           <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-6">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-gray-800">Ingredients</h2>
-            <ul className="list-disc list-inside mb-4 space-y-2">
-              {recipe.ingredients.map((ingredient, index) => (
-                <li key={index} className="text-gray-700">{ingredient}</li>
-              ))}
-            </ul>
+            <button 
+              onClick={() => setShowIngredients(!showIngredients)}
+              className="w-full text-left text-xl md:text-2xl font-bold mb-4 text-gray-800 flex justify-between items-center"
+            >
+              Ingredients
+              <svg className={`w-6 h-6 transform ${showIngredients ? 'rotate-180' : ''} transition-transform`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            {showIngredients && (
+              <ul className="list-disc list-inside mb-4 space-y-2">
+                {recipe.ingredients.map((ingredient, index) => (
+                  <li key={index} className="text-gray-700">{ingredient}</li>
+                ))}
+              </ul>
+            )}
           </div>
+          
           <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-6">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-gray-800">Preparation Steps</h2>
-            <ol className="list-decimal list-inside space-y-4">
-              {recipe.steps.map((step, index) => (
-                <li key={index} className="text-gray-700">
-                  <span className="font-semibold">Step {index + 1}:</span> {step}
-                </li>
-              ))}
-            </ol>
+            <button 
+              onClick={() => setShowSteps(!showSteps)}
+              className="w-full text-left text-xl md:text-2xl font-bold mb-4 text-gray-800 flex justify-between items-center"
+            >
+              Preparation Steps
+              <svg className={`w-6 h-6 transform ${showSteps ? 'rotate-180' : ''} transition-transform`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            {showSteps && (
+              <ol className="list-decimal list-inside space-y-4">
+                {recipe.steps.map((step, index) => (
+                  <li key={index} className="text-gray-700">
+                    <span className="font-semibold">Step {index + 1}:</span> {step}
+                  </li>
+                ))}
+              </ol>
+            )}
           </div>
-<div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">Nutrition Information</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h3 className="text-lg font-semibold mb-4 text-gray-700">Macronutrients</h3>
-                <div className="h-64">
-                  <Doughnut data={macronutrientData} options={doughnutOptions} />
+          
+          <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-6">
+            <button 
+              onClick={() => setShowNutrition(!showNutrition)}
+              className="w-full text-left text-2xl md:text-3xl font-bold mb-6 text-gray-800 flex justify-between items-center"
+            >
+              Nutrition Information
+              <svg className={`w-6 h-6 transform ${showNutrition ? 'rotate-180' : ''} transition-transform`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            {showNutrition && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h3 className="text-lg font-semibold mb-4 text-gray-700">Macronutrients</h3>
+                  <div className="h-64">
+                    <Doughnut data={macronutrientData} options={doughnutOptions} />
+                  </div>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h3 className="text-lg font-semibold mb-4 text-gray-700">Nutrition Breakdown</h3>
+                  <div className="h-64">
+                    <Bar data={nutritionData} options={barOptions} />
+                  </div>
                 </div>
               </div>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h3 className="text-lg font-semibold mb-4 text-gray-700">Nutrition Breakdown</h3>
-                <div className="h-64">
-                  <Bar data={nutritionData} options={barOptions} />
-                </div>
-              </div>
-            </div>
+            )}
           </div>
         </div>
         <div className="hidden md:block w-1/2 relative">
