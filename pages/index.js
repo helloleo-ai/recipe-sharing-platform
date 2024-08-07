@@ -65,9 +65,10 @@ export default function Home() {
       <div className="flex justify-between items-center max-w-6xl mx-auto px-4 py-4">
         <Header />
       </div>
-      <main className="container mx-auto p-8 flex-grow max-w-4xl">
+<main className="container mx-auto p-8 flex-grow max-w-4xl">
         <div className="bg-white p-8 rounded-lg shadow-lg">
-          <h1 className="text-4xl font-bold mb-4 text-orange-500">Recipe Sharing Platform</h1>
+          <h1 className="text-4xl font-bold mb-2 text-orange-500">Recipe Sharing Platform</h1>
+          <p className="text-xl text-gray-600 mb-6">Discover, share, and enjoy delicious recipes from around the world</p>
 <div className="mb-6 flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 <button
