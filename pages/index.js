@@ -118,7 +118,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <section className="container mx-auto p-8 bg-gray-100 rounded-xl shadow-inner">
+      <section className="container mx-auto p-8 bg-gray-100 rounded-xl shadow-inner mb-8">
         <h2 className="text-4xl font-bold mb-2 text-center text-gray-800">Nutrition Information</h2>
         <p className="text-xl text-center text-gray-600 mb-8">Our platform provides detailed nutrition information for each recipe, helping you make informed dietary choices.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -142,38 +142,39 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <h2 className="text-4xl font-bold mb-2 text-center text-gray-800">Culinary Inspiration</h2>
-      <p className="text-xl text-center text-gray-600 mb-8">Discover new flavors and cooking techniques</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {recipes.map(recipe => (
-          <div key={recipe.id} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-            <div className="relative">
-              <img src={recipe.image} alt={recipe.title} className="w-full h-48 object-cover" />
-              <div className="absolute top-0 right-0 bg-orange-500 text-white px-3 py-1 rounded-bl-lg">
-                {recipe.ingredients.length} ingredients
-              </div>
-            </div>
-            <div className="p-6">
-              <h3 className="text-2xl font-bold mb-2 text-gray-800">{recipe.title}</h3>
-              <p className="text-gray-600 mb-4 line-clamp-3">{recipe.steps[0]}</p>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <img src="https://i.pravatar.cc/40" alt="Author" className="w-8 h-8 rounded-full mr-2" />
-                  <span className="text-sm text-gray-500">Chef Linguini</span>
+<section className="container mx-auto p-8 bg-gray-100 rounded-xl shadow-inner mb-8">
+        <h2 className="text-4xl font-bold mb-2 text-center text-gray-800">Culinary Inspiration</h2>
+        <p className="text-xl text-center text-gray-600 mb-8">Discover new flavors and cooking techniques</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {recipes.map(recipe => (
+            <div key={recipe.id} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="relative">
+                <img src={recipe.image} alt={recipe.title} className="w-full h-48 object-cover" />
+                <div className="absolute top-0 right-0 bg-orange-500 text-white px-3 py-1 rounded-bl-lg">
+                  {recipe.ingredients.length} ingredients
                 </div>
-                <Link href={`/recipes/${recipe.id}`} legacyBehavior>
-                  <a className="text-orange-500 hover:text-orange-600 font-semibold flex items-center">
-                    Read more
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </a>
-                </Link>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-2 text-gray-800">{recipe.title}</h3>
+                <p className="text-gray-600 mb-4 line-clamp-3">{recipe.steps[0]}</p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <img src="https://i.pravatar.cc/40" alt="Author" className="w-8 h-8 rounded-full mr-2" />
+                    <span className="text-sm text-gray-500">Chef Linguini</span>
+                  </div>
+                  <Link href={`/recipes/${recipe.id}`} legacyBehavior>
+                    <a className="text-orange-500 hover:text-orange-600 font-semibold flex items-center">
+                      Read more
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </a>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       <Footer />
     </div>
   );
