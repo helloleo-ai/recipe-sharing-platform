@@ -119,6 +119,29 @@ export default function Home() {
       </div>
             </main>
 <section className="container mx-auto p-8 bg-gray-100 rounded-xl shadow-inner">
+              <h2 className="text-4xl font-bold mb-2 text-center text-gray-800">Nutrition Information</h2>
+              <p className="text-xl text-center text-gray-600 mb-8">Our platform provides detailed nutrition information for each recipe, helping you make informed dietary choices.</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold mb-2 text-gray-800">Calories</h3>
+                    <p className="text-gray-600 mb-4">Each recipe includes the total calorie count, so you can manage your daily intake effectively.</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold mb-2 text-gray-800">Macronutrients</h3>
+                    <p className="text-gray-600 mb-4">We break down the macronutrient content (protein, carbs, fat) for each recipe, helping you balance your diet.</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold mb-2 text-gray-800">Micronutrients</h3>
+                    <p className="text-gray-600 mb-4">Our recipes also provide information on essential vitamins and minerals, ensuring you get a well-rounded diet.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
               <h2 className="text-4xl font-bold mb-2 text-center text-gray-800">Culinary Inspiration</h2>
               <p className="text-xl text-center text-gray-600 mb-8">Discover new flavors and cooking techniques</p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
