@@ -1,3 +1,11 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import Link from 'next/link';
+import Image from 'next/image';
+
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
 const getCategoryEmoji = (category) => {
   switch (category.toLowerCase()) {
     case 'pasta':
@@ -14,13 +22,6 @@ const getCategoryEmoji = (category) => {
       return '🍽️';
   }
 };
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import Link from 'next/link';
-import Image from 'next/image';
-
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 export default function Home() {
   const [recipes, setRecipes] = useState([]);
@@ -142,7 +143,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-<section className="container mx-auto p-8 bg-gray-100 rounded-xl shadow-inner mb-8">
+      <section className="container mx-auto p-8 bg-gray-100 rounded-xl shadow-inner mb-8">
         <h2 className="text-4xl font-bold mb-2 text-center text-gray-800">Culinary Inspiration</h2>
         <p className="text-xl text-center text-gray-600 mb-8">Discover new flavors and cooking techniques</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -175,6 +176,7 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
       <Footer />
     </div>
   );
