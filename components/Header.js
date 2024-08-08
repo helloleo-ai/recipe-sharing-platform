@@ -6,7 +6,7 @@ export default function Header() {
       <div className="flex justify-end items-center space-x-4">
 <nav className="flex space-x-4">
           <Link href="/" legacyBehavior>
-            <a className="flex items-center space-x-2 bg-gradient-to-r from-orange-400 to-orange-600 text-white px-4 py-2 rounded-full shadow-md hover:from-orange-500 hover:to-orange-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+            <a className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 rounded-full shadow-md hover:from-blue-600 hover:to-blue-800 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
               <span className="text-xl">🏠</span>
               <span className="font-semibold">Home</span>
             </a>
